@@ -1,0 +1,37 @@
+# ---------- Godot 4 ----------
+.godot/
+/android/
+*.tmp
+# Export credentials are stored in .godot/, so export_presets.cfg is safe to commit.
+
+# ---------- Godot .NET / C# ----------
+.mono/
+bin/
+obj/
+*.user
+*.suo
+*.userprefs
+*.csproj.user
+mono_crash.*.json
+data_*/
+
+# ---------- Build output ----------
+/build/
+/exports/
+*.pck
+*.exe
+*.x86_64
+*.apk
+*.aab
+
+# ---------- IDE ----------
+.idea/
+.vs/
+.vscode/
+*.swp
+*~
+
+# ---------- OS ----------
+.DS_Store
+Thumbs.db
+desktop.ini
