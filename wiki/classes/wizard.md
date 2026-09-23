@@ -3,7 +3,7 @@
 > Zdroje: [raw/2026-09-22-wizard](../../raw/2026-09-22-wizard.md) · Související: [classes](../mechanics/classes.md), [staty](../mechanics/stats.md)
 
 ## Role
-Jen **DPS**, se dvěma variantami (volí se při výběru postavy):
+Role: jen **DPS**. Dva **speky** (volí se při výběru postavy):
 - **Pyromancer**: oheň, DoT (Ignite), šíření mezi cíli
 - **Soultaker**: poškození roste s počtem nepřátel, „master blaster“ na hordy malých nepřátel
 

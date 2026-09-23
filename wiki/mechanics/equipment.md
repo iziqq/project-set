@@ -7,7 +7,8 @@ Cíl: hra má být **dynamická**, každý hráč si vybavením skládá build p
 ## Principy
 - **Žádná omezení:** každá postava může nosit cokoli (Wizard se štítem, Warrior s holí…).
   **Výjimka: luk** může nosit jen [Scout Hawkeye](../classes/scout.md).
-- **Žádný item level:** hodnoty statů jsou **statické**. Záměrně, aby hra nebyla nekonečný grind.
+- **Žádný item level:** hodnoty statů jsou **statické**. Záměrně, aby hra nebyla nekonečný grind
+  ([ADR 0002](../decisions/0002-bez-item-levelu.md)).
 - Síla itemu = **základní hodnota × násobitel rarity × násobitel slotu**.
 
 ## Sloty (13)

@@ -52,6 +52,9 @@ Tři vrstvy:
 - Nevymýšlej herní design — co uživatel neřekl, zapiš jako otevřenou otázku, ne jako fakt.
 - Log: nadpis `## [YYYY-MM-DD] <ingest|query|lint|edit> | <název>` + odrážky se změnami.
 - Rozhodnutí (ADR) v `decisions/`: Datum, Stav, Kontext, Rozhodnutí, Důsledky.
+  **ADR píšeš ty (Claude), bez vyzvání**, když padne zásadní rozhodnutí: takové, které ovlivní víc
+  systémů, něco vyřazuje, nebo si za půl roku nikdo nevzpomene proč. Napiš ho hned při ingestu
+  a v dotčených stránkách na něj odkaž. Drobné číselné hodnoty ADR nepotřebují.
 
 ## Kódové konvence (C# / Godot)
 - Godot 4 .NET build, .NET 8+, `Nullable` zapnuté.

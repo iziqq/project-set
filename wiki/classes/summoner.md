@@ -4,7 +4,7 @@
 
 Postava, která bojuje pomocí **vyvolaných bytostí**.
 
-## Specializace (volí se při výběru postavy)
+## Speky (volí se při výběru postavy)
 | Spec | Role | Vyvolání |
 |---|---|---|
 | **Hell Knight** | Tank | **pekelná stvůra** (démon), která tankuje za něj |

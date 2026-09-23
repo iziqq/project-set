@@ -107,3 +107,62 @@ Formát nadpisu: `## [YYYY-MM-DD] <ingest|query|lint|edit> | <název>`
 - classes: přidána obecná otevřená otázka aggro / threat.
 - Otevřené: resource, priorita primary, vzorec Hell Knight Mastery, obecná mechanika summonů.
 - Summoner: Mana, priorita jen Int, Hell Knight Mastery = 1 %/bod HP a Mitigation Summonera na démona. Parametry summonů určí jednotlivá kouzla.
+
+## [2026-09-23] ingest | Monk
+- Zdroj: `raw/2026-09-23-monk.md`
+- Nová stránka classes/monk: tank (90 životů, Str 9, Agi 6) a DPS (80 životů, Str 8, Agi 9), priorita Str/Agi. Mastery: tank = 10 % + 0,5 %/bod poškození na štít (6 s), DPS = +0,1 %/bod za každý bod energy, který schopnost stojí.
+- Aktualizováno: mechanics/classes, index.
+- Otevřené: resource, zda je štít z poškození způsobeného, nebo utrpěného; strmé škálování DPS Mastery.
+- Monk upřesnění: resource Energy; štít z poškození, které Monk způsobí; štít se nesčítá (větší přepíše, menší obnoví trvání); strmé DPS škálování zůstává k pozdějšímu doladění.
+- Nová stránka mechanics/shields: srovnání štítů Paladina a Monka.
+- Štíty z různých zdrojů (Paladin + Monk) jsou samostatné vrstvy a sčítají se; pořadí spotřeby zůstává jako návrh.
+
+## [2026-09-23] ingest | Shaman
+- Zdroj: `raw/2026-09-23-shaman.md`
+- Nová stránka classes/shaman: Mana, priorita jen Int. Witch Doctor (heal, 80 životů, Int 8, Spirit 9; Mastery 12 % + 0,1 %/bod poškození jako heal na nejzraněnější cíl) a Voodoo Master (DPS, Int 10, Spirit 7; Mastery Voodoo Doll 10 % + 0,05 %/bod přenosu).
+- Aktualizováno: mechanics/classes, index.
+- Otevřené: cíl healu (i Shaman sám?), aplikace a trvání Voodoo Doll, řetězení mezi loutkami.
+- Shaman upřesnění: heal míří na nejnižší % HP včetně Shamana, má velký dosah. Voodoo Doll je jedno kouzlo, jen 1 cíl, trvá do smrti cíle nebo přeznačení.
+- Shaman: overheal se neřeší (propadne); přenos Voodoo Doll se nepočítá, když je hlavní cíl zároveň loutka.
+
+## [2026-09-23] ingest | Cleric
+- Zdroj: `raw/2026-09-23-cleric.md`
+- Nová stránka classes/cleric: 3 speky — Mind Bender (DPS, debuff Insane: redukce dmg cíle 5 %/stack do 15 %, Mastery +0,1 % dmg i redukce za stack, strop redukce 40 %), Prophet (buffer, Spirit 11, Mastery +0,1 % síly buffů), Bishop (heal, Echo 0,5 %/bod, max 60 %).
+- Aktualizováno: mechanics/classes (+ otázka na nevyužité resource Hope/Darkness), index.
+- Otevřené: resource Clerica, počet a trvání stacků Insane, seznam buffů Propheta, pravidla Echa.
+- Cleric upřesnění: Mana, priorita jen Int. Insane max 3 stacky, redukce 5 % + 0,1 %/bod do 13,3 % za stack (39,9 % celkem), trvání 30 s s obnovou. Prophet: buffy % dmg, Holy Fire, healovací aura (k domyšlení). Echo může skočit i na hlavní cíl.
+- Nová otázka: Hope a Darkness nepoužívá žádná postava.
+- Enum Resource zkrácen na Mana Points / Rage / Energy. Hope a Darkness vyřazeny (nikdo je nepoužíval).
+
+## [2026-09-23] lint | Kontrola wiki
+- Odstraněna zastaralá tvrzení: „resource je jen odhad“ (classes), „přiřazení k postavám nepotvrzeno“ (stats), Wizard „Mastery (upřesnit)“.
+- Zavřeny vyřešené otázky v classes (resource, priorita primary statů).
+- classes: nová srovnávací tabulka base statů všech postav a speků.
+- overview: aktualizován stav (8 postav hotovo, seznam chybějícího), doplněn odkaz na štíty, datum.
+- index: doplněny chybějící raw zdroje (štíty, resource cleanup), upřesněna shrnutí.
+- Křížové odkazy: paladin → shields, classes → shields.
+
+## [2026-09-23] ingest | Regenerace Rage/Energy, názvosloví
+- Zdroj: `raw/2026-09-23-regenerace-role.md`
+- Rage: +10 za autoattack. Energy: +5 za 3 s. Spirit 0 u Str/Agi postav je záměr. Zapsáno do stats (tabulka resource) a na stránky Warrior, Scout, Monk.
+- Sjednoceno názvosloví: **Role** = Tank / DPS / Healer, **Spec** = pojmenovaná specializace. Upraveny všechny stránky postav a classes.
+- classes: srovnávací tabulka má nyní sloupce Class / Spec / Role; chybějící názvy speků označeny.
+
+## [2026-09-23] edit | ADR 0002–0004
+- Nové ADR: 0002 bez item levelu, 0003 spec při výběru postavy, 0004 resource typy (Mana/Rage/Energy).
+- Odkazy z equipment, classes, stats; index doplněn.
+- CLAUDE.md: ADR píše Claude sám při zásadních rozhodnutích.
+
+## [2026-09-23] ingest | Názvy speků
+- Zdroj: `raw/2026-09-23-nazvy-speku.md`
+- Doplněny chybějící názvy: Warrior = Temple Knight (tank) / Duelist (DPS); Paladin = Phoenix Knight (tank) / Warlord (DPS) / Shillien (healer); Monk = Tyrant (tank) / Wind Rider (DPS).
+- Přejmenovány sekce Mastery na stránkách postav, aktualizovány classes, shields, index.
+- Všech 15 speků má nyní název. Zbývají schopnosti.
+- Přejmenování speků (původní názvy pocházely z Lineage 2): Warrior = Warden / Bleed Dancer; Paladin = Dawn Knight / Phoenix Rider / Light Bringer; Monk = Iron Turtle / Deadly Tiger.
+- classes: přidán přehled počtu speků podle rolí (19 speků: 4 tank, 4 healer, 11 DPS). Opravuje dřívější zápis „15 speků“ v logu.
+
+## [2026-09-23] ingest | Schopnosti – rozsah
+- Zdroj: `raw/2026-09-23-schopnosti-rozsah.md`
+- Nová stránka mechanics/abilities: 5–6 aktivních schopností na postavu + několik pasivek, šablona pro zápis schopnosti (cena, cooldown, cast time, dosah, cíl, efekt).
+- Odkazy z classes, index, overview.
+- Otevřené: schopnosti na postavu, nebo na spec; hotbar; globální cooldown; odemykání během běhu.

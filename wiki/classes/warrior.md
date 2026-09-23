@@ -3,13 +3,15 @@
 > Zdroje: [raw/2026-09-22-warrior](../../raw/2026-09-22-warrior.md) · Související: [classes](../mechanics/classes.md), [staty](../mechanics/stats.md), [equipment](../mechanics/equipment.md)
 
 ## Role
-Roli volí hráč při výběru postavy.
+Spec volí hráč při výběru postavy.
 
-- **DPS** (vždy)
-- **Tank**: jen s **Weapon + Shield** ([equipment](../mechanics/equipment.md)). Bez štítu Warrior neblokuje.
+| Spec | Role | Poznámka |
+|---|---|---|
+| **Warden** | Tank | vyžaduje **Weapon + Shield** ([equipment](../mechanics/equipment.md)); bez štítu neblokuje |
+| **Bleed Dancer** | DPS | bleed z kritických zásahů |
 
 ## Resource
-**Rage** (max. 100, viz [staty](../mechanics/stats.md#resource-enum))
+**Rage** (max. 100). Generuje se **+10 za každý autoattack**, ne přes Spirit (Warrior má Spirit 0).
 
 ## Base staty
 | Stat | Hodnota |
@@ -26,8 +28,8 @@ Warrior si může zvolit **Strength** nebo **Agility**.
 ## Mastery
 Mastery se liší podle role.
 
-### Tank: Block Chance
-**Block Chance** je speciální stat jen pro Warrior tanka.
+### Warden (tank): Block Chance
+**Block Chance** je speciální stat jen pro Wardena.
 - Úspěšný block sníží příchozí **fyzické** poškození o **40 %**. **Magické poškození blokovat nejde.**
 - Vyžaduje **štít**.
 - Šance na block: **15 %** bez Mastery a **+1 % za každý bod Mastery**.
@@ -50,7 +52,7 @@ blockReduction = 40 % + 60 % × nadbytek / (nadbytek + K)      K = 100
 | 185 | 100 % | 70 % |
 | 285 | 100 % | 80 % |
 
-### DPS: Bleed
+### Bleed Dancer (DPS): Bleed
 Každý **kritický zásah** aplikuje na cíl **Bleed** (fyzické poškození v čase).
 **Záměr:** velmi silný proti jednomu cíli s hodně životy (boss, elitní mob).
 

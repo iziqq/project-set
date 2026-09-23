@@ -31,7 +31,7 @@ Chance = +0,5 %; 1 Intelligence = 1 bod CDR, počítaný přes vzorec).
 | **Crit Damage** | +1 % síly kritu za bod | viz [Krit](#krit) |
 | **Hit Chance** | +2 % šance zasáhnout za bod | **cap 20 bodů = vždy zasáhne**, viz [Hit Chance](#hit-chance) |
 | **Attack Speed** | +2 % rychlosti útoku za bod | |
-| **Mastery** | zesílí specifické kouzlo / pasivku | **jiné pro každou postavu i roli**, např. Warrior tank → [Block Chance](../classes/warrior.md#tank-block-chance) |
+| **Mastery** | zesílí specifické kouzlo / pasivku | **jiné pro každou postavu i roli**, každý spec má vlastní, viz [classes](classes.md) |
 | **Cooldown Reduction** | snižuje cooldowny | **asymptoticky k 60 %**, viz [vzorce](#vzorce) |
 | **HP Regen** | +1 HP za sekundu za bod | flat, viz [Regenerace](#regenerace) |
 | **Resource Regen** | +1 resource za sekundu za bod | flat, platí pro **všechny** typy resource včetně Rage |
@@ -92,7 +92,8 @@ Původně „1 bod = 1 %“. Vzorec to nahrazuje: u malých hodnot to vychází 
 
 ## Regenerace
 - HP Regen a Resource Regen jsou zatím **flat za sekundu**.
-- Resource Regen platí i pro Rage. Warrior, který chce Rage každou sekundu, si to může postavit.
+- Resource Regen z itemů platí i pro Rage a Energy a přičítá se k jejich vlastní regeneraci
+  (Rage z autoattacků, Energy 5 / 3 s).
 - Plán: **singleplayer bonus**, ve kterém se flat regenerace mění na procentuální (detaily později).
 
 ## Spirit vs. Resource Regen
@@ -117,8 +118,18 @@ Příklad: Wizard, 4 Spirit, max. Mana 150 (talent), 10 Resource Regen → 6 + 1
 
 ## Resource (enum)
 Typ zdroje, který postava spotřebovává na schopnosti:
-**Mana Points, Rage, Hope, Darkness, Energy**. Max. zásoba je 100 (default), talenty (a Mastery) ji můžou zvýšit, viz Spirit.
-Přiřazení k postavám: viz [classes](classes.md) (zatím nepotvrzeno).
+**Mana Points, Rage, Energy**.
+
+| Resource | Postavy | Jak se doplňuje |
+|---|---|---|
+| Mana Points | [Paladin](../classes/paladin.md), [Wizard](../classes/wizard.md), [Summoner](../classes/summoner.md), [Shaman](../classes/shaman.md), [Cleric](../classes/cleric.md) | **Spirit** (% z max. za sekundu) + Resource Regen z itemů |
+| Rage | [Warrior](../classes/warrior.md) | **+10 Rage za každý autoattack** (Spirit 0) |
+| Energy | [Scout](../classes/scout.md), [Monk](../classes/monk.md) | **+5 Energy za 3 s** (Spirit 0) |
+
+Postavy na Strength / Agility mají **Spirit 0** záměrně: Rage a Energy se doplňují vlastním
+způsobem, ne přes Spirit. Resource Regen z itemů se přičítá ke všem typům.
+
+Původně byly v enumu i **Hope** a **Darkness**. Žádná postava je nepoužívá, proto byly vyřazeny ([ADR 0004](../decisions/0004-resource-typy.md)). Max. zásoba je 100 (default), talenty (a Mastery) ji můžou zvýšit, viz Spirit.
 
 ## Poznámky z diskuze
 - Claude upozorňoval, že Agility škáluje 3 staty a může přerůst Strength. Uživatel čeká opačný

@@ -1,6 +1,6 @@
 # Project Set — přehled
 
-> Zdroje: [raw/2026-09-22-zakladni-popis-hry](../raw/2026-09-22-zakladni-popis-hry.md), [raw/2026-09-22-zanr-rezimy-role](../raw/2026-09-22-zanr-rezimy-role.md) · Poslední aktualizace: 2026-09-22
+> Zdroje: [raw/2026-09-22-zakladni-popis-hry](../raw/2026-09-22-zakladni-popis-hry.md), [raw/2026-09-22-zanr-rezimy-role](../raw/2026-09-22-zanr-rezimy-role.md) · Poslední aktualizace: 2026-09-23
 
 ## Co je Project Set
 2D **RPG roguelike** se třemi režimy: **singleplayer roguelike**, **online co-op roguelike**
@@ -11,8 +11,10 @@ a přetváření statů na itemech.
 ## Hlavní systémy
 - [Herní režimy](game/game-modes.md) — singleplayer, co-op, PvP battle royale
 - [Postavy (classes)](mechanics/classes.md) — 8 postav, všechny umí DPS, některé i tank / healer
+- [Schopnosti](mechanics/abilities.md) — 5–6 aktivních na postavu + pasivky
 - [Talenty](mechanics/talents.md) — strom, 20 talentů na postavu
-- [Staty](mechanics/stats.md) — atributy postavy a zdroje (resources)
+- [Staty](mechanics/stats.md) — primary / secondary staty, vzorce, resource (Mana / Rage / Energy)
+- [Štíty](mechanics/shields.md) — absorb z healu (Paladin) a z poškození (Monk)
 - [Vybavení (equipment)](mechanics/equipment.md) — 13 slotů, 4 rarity, pevné staty, reroll za gold
 - [Ekonomika](mechanics/economy.md) — Gold
 - [Síťování](tech/networking.md) — online, malý vlastní server
@@ -24,10 +26,13 @@ a přetváření statů na itemech.
 
 ## Aktuální stav
 - Repozitář, wiki a konvence založeny ([tech/stack](tech/stack.md)).
-- Popsán rámec: žánr, režimy, classes a jejich role, staty, talenty (strom, bez obsahu), equipment.
+- **Hotovo:** žánr a režimy, staty a vzorce, equipment (rarita, sloty, reroll, sety),
+  všech **8 postav** — base staty, speky, role, resource a Mastery ([classes](mechanics/classes.md)).
+- **Chybí:** schopnosti postav, obsah talentů, konkrétní itemy a jejich základní hodnoty,
+  ekonomika (ceny), soubojový systém (aggro), síťová architektura, příběh a core loop.
 
 ## Otevřené otázky
 - Perspektiva kamery (top-down / side-view)?
 - Co přetrvává mezi roguelike běhy (meta-progrese)?
 - Cílové platformy?
-- Resource jednotlivých postav.
+- Aggro / threat systém pro tanky ([classes](mechanics/classes.md)).

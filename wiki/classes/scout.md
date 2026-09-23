@@ -3,12 +3,12 @@
 > Zdroje: [raw/2026-09-22-scout](../../raw/2026-09-22-scout.md) · Související: [classes](../mechanics/classes.md), [staty](../mechanics/stats.md)
 
 ## Role
-Jen **DPS**, ale se **dvěma variantami** (volí se při výběru postavy):
+Role: jen **DPS**. Dva **speky** (volí se při výběru postavy):
 - **Hawkeye**: ranged DPS, střílí z **luku** (luk může nosit **jen Hawkeye**, viz [equipment](../mechanics/equipment.md))
 - **Adventurer**: melee DPS
 
 ## Resource
-**Energy** (max. 100)
+**Energy** (max. 100). Regeneruje se **+5 za 3 s**, ne přes Spirit (Spirit 0).
 
 ## Base staty
 | Stat | Hodnota |
@@ -18,7 +18,7 @@ Jen **DPS**, ale se **dvěma variantami** (volí se při výběru postavy):
 | Strength | 6 |
 | Intelligence | 0 (?) |
 
-Stejné pro obě varianty.
+Stejné pro oba speky.
 
 ## Priorita primary statu (dropy)
 **Agility** nebo **Strength**.
