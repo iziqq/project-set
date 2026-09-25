@@ -14,5 +14,5 @@ Vybavení může spec doplňovat (Warrior tank potřebuje štít), ale nevolí h
 ## Důsledky
 - Base staty a Mastery lze definovat per spec, ne per class.
 - Hráč se rozhoduje dřív, než najde vybavení — spec musí být čitelný už z popisu.
-- Nutné rozhodnout, zda a kdy jde spec změnit (otevřená otázka v [classes](../mechanics/classes.md)).
+- Nutné rozhodnout, zda a kdy jde spec změnit (otevřená otázka v [classes](../classes/index.md)).
 - V co-opu se role domlouvají před během, ne během něj.

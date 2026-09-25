@@ -9,7 +9,7 @@ Hry s item levelem nutí hráče opakovaně sbírat lepší verze téhož předm
 
 ## Rozhodnutí
 Itemy nemají level. Hodnoty statů jsou **statické** a vycházejí ze vzorce
-`základní hodnota × násobitel rarity × násobitel slotu` ([equipment](../mechanics/equipment.md)).
+`základní hodnota × násobitel rarity × násobitel slotu` ([equipment](../equipment/index.md)).
 
 ## Důsledky
 - Postup hráče jde přes **rarity, buildy a přetváření statů**, ne přes rostoucí čísla.

@@ -10,24 +10,39 @@ Formát: `- [Název](cesta.md) — jednořádkové shrnutí`
 - [Koncept](game/concept.md) — žánr, hráčská fantazie; kamera a core loop zatím chybí
 - [Herní režimy](game/game-modes.md) — singleplayer roguelike, online co-op (max 5), PvP battle royale
 
-## Mechaniky (mechanics/)
-- [Postavy (classes)](mechanics/classes.md) — 8 postav, 19 speků (4 tank / 4 healer / 11 DPS), srovnávací tabulka base statů
-- [Schopnosti](mechanics/abilities.md) — 5–6 aktivních na postavu + pasivky, šablona zápisu
-- [Talenty](mechanics/talents.md) — strom, 20 talentů na postavu (obsah TBD)
-- [Staty](mechanics/stats.md) — Primary (Str, Agi, Int, HP, Spirit), Secondary, vzorce Mitigation/CDR, hit 60 % + 2 %/bod, resource Mana/Rage/Energy
-- [Štíty (absorb)](mechanics/shields.md) — srovnání štítů Paladina a Monka, pravidla skládání
-- [Ekonomika](mechanics/economy.md) — Gold (budoucí měna)
-- [Vybavení (equipment)](mechanics/equipment.md) — 13 slotů, HP + primary + secondary podle rarity, násobitele slotů, bez item levelu, reroll 60 %, sety 2/4/6/8
-
 ## Postavy (classes/)
-- [Warrior](classes/warrior.md) — Rage, base staty (100 životů, Str 10, Agi 3), priorita Str/Agi, speky Warden (tank, Block) a Bleed Dancer (DPS, Bleed)
-- [Paladin](classes/paladin.md) — Mana, 90 životů, speky Dawn Knight (tank, stun), Phoenix Rider (DPS, magický dmg), Light Bringer (healer, štít)
-- [Scout](classes/scout.md) — Energy, 75 životů, Agi 12 / Str 6, priorita Agi/Str, Hawkeye (+0,3 % ranged dmg/bod), Adventurer (+0,5 % efektivita Agility/bod)
-- [Wizard](classes/wizard.md) — Mana, 70 životů, Int 15 / Spirit 4, priorita jen Int, Pyromancer (Ignite DoT, řetězový přeskok na cíle bez Ignite) a Soultaker (+1 % + 0,1 %/bod dmg za nepřítele)
-- [Summoner](classes/summoner.md) — speky Hell Knight (tank přes démona), Necromancer (kostlivec), Warlock (krátkodobí démoni), Mana, priorita Int
-- [Monk](classes/monk.md) — Energy, speky Iron Turtle (tank, štít z dmg) a Deadly Tiger (DPS, bonus za cenu schopnosti), priorita Str/Agi
-- [Shaman](classes/shaman.md) — Mana, Witch Doctor (heal z poškození) a Voodoo Master (Voodoo Doll), priorita Int
-- [Cleric](classes/cleric.md) — speky Mind Bender (Insane), Prophet (buffer, Spirit 11), Bishop (Echo heal), Mana, priorita Int
+- [Přehled postav](classes/index.md) — 8 postav, 19 speků (4 tank / 4 healer / 11 DPS), role vs. spec, srovnání base statů
+- [Schopnosti](classes/abilities.md) — 5–6 aktivních na postavu + pasivky, šablona zápisu
+- [Talenty](classes/talents.md) — strom, 20 talentů na postavu (obsah TBD)
+
+Každá postava má složku `wiki/classes/<postava>/`: `index.md` (popis, staty, Mastery),
+`abilities.md` (schopnosti), `talents.md` (strom talentů).
+
+- [Warrior](classes/warrior/index.md) — 12 schopností (návrh), Rage, base staty (100 životů, Str 10, Agi 3), priorita Str/Agi, speky Warden (tank, Block) a Bleed Dancer (DPS, Bleed)
+- [Paladin](classes/paladin/index.md) — 17 schopností + Divine Spark (návrh), Mana, 90 životů, speky Dawn Knight (tank, stun), Phoenix Rider (DPS, magický dmg), Light Bringer (healer, štít)
+- [Scout](classes/scout/index.md) — 12 schopností (návrh), Energy, 75 životů, Agi 12 / Str 6, priorita Agi/Str, Hawkeye (+0,3 % ranged dmg/bod), Adventurer (+0,5 % efektivita Agility/bod)
+- [Wizard](classes/wizard/index.md) — 12 schopností (návrh), Mana, 70 životů, Int 15 / Spirit 4, priorita jen Int, Pyromancer (Ignite DoT, řetězový přeskok na cíle bez Ignite) a Soultaker (+1 % + 0,1 %/bod dmg za nepřítele)
+- [Summoner](classes/summoner/index.md) — 18 schopností (návrh), speky Hell Knight (tank přes démona), Necromancer (kostlivec), Warlock (krátkodobí démoni), Mana, priorita Int
+- [Monk](classes/monk/index.md) — 12 schopností (návrh), Energy, speky Iron Turtle (tank, štít z dmg) a Deadly Tiger (DPS, bonus za cenu schopnosti), priorita Str/Agi
+- [Shaman](classes/shaman/index.md) — 12 schopností (návrh), Mana, Witch Doctor (heal z poškození) a Voodoo Master (Voodoo Doll), priorita Int
+- [Cleric](classes/cleric/index.md) — 18 schopností (návrh), speky Mind Bender (Insane), Prophet (buffer, Spirit 11), Bishop (Echo heal), Mana, priorita Int
+
+## Staty (stats/)
+- [Staty](stats/index.md) — Primary (Str, Agi, Int, HP, Spirit), Secondary, vzorce Mitigation/CDR, resource Mana/Rage/Energy
+
+## Vybavení (equipment/)
+- [Vybavení](equipment/index.md) — pravidla: 13 slotů, rarity, násobitele slotů, bez item levelu, reroll 60 %, sety 2/4/6/8
+- Itemy podle slotů: [heads](equipment/heads/index.md) · [chests](equipment/chests/index.md) · [legs](equipment/legs/index.md) · [gloves](equipment/gloves/index.md) · [belts](equipment/belts/index.md) · [boots](equipment/boots/index.md) · [rings](equipment/rings/index.md) · [earrings](equipment/earrings/index.md) · [weapons](equipment/weapons/index.md) · [offhands](equipment/offhands/index.md) · [talismans](equipment/talismans/index.md) (zatím prázdné)
+
+## Souboj (combat/)
+- [Souboj](combat/index.md) — rozcestník soubojových pravidel
+- [Výpočet poškození](combat/damage.md) — pořadí hit → crit → block → mitigation, typy poškození
+- [Štíty (absorb)](combat/shields.md) — štíty Light Bringera a Iron Turtle, pravidla skládání
+- [Efekty](combat/effects.md) — DoT (bleed, ignite), debuffy (Insane, Voodoo Doll), buffy, stun
+- [Aggro / threat](combat/threat.md) — threat z dmg a healu, tank spec 10×, tank musí mít AoE
+
+## Ekonomika (economy/)
+- [Ekonomika](economy/index.md) — Gold (budoucí měna)
 
 ## Technika (tech/)
 - [Tech stack](tech/stack.md) — Godot 4 + C#/.NET, struktura projektu

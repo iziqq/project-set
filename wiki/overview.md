@@ -10,13 +10,13 @@ a přetváření statů na itemech.
 
 ## Hlavní systémy
 - [Herní režimy](game/game-modes.md) — singleplayer, co-op, PvP battle royale
-- [Postavy (classes)](mechanics/classes.md) — 8 postav, všechny umí DPS, některé i tank / healer
-- [Schopnosti](mechanics/abilities.md) — 5–6 aktivních na postavu + pasivky
-- [Talenty](mechanics/talents.md) — strom, 20 talentů na postavu
-- [Staty](mechanics/stats.md) — primary / secondary staty, vzorce, resource (Mana / Rage / Energy)
-- [Štíty](mechanics/shields.md) — absorb z healu (Paladin) a z poškození (Monk)
-- [Vybavení (equipment)](mechanics/equipment.md) — 13 slotů, 4 rarity, pevné staty, reroll za gold
-- [Ekonomika](mechanics/economy.md) — Gold
+- [Postavy (classes)](classes/index.md) — 8 postav, všechny umí DPS, některé i tank / healer
+- [Schopnosti](classes/abilities.md) — 5–6 aktivních na postavu + pasivky
+- [Talenty](classes/talents.md) — strom, 20 talentů na postavu
+- [Staty](stats/index.md) — primary / secondary staty, vzorce, resource (Mana / Rage / Energy)
+- [Štíty](combat/shields.md) — absorb z healu (Paladin) a z poškození (Monk)
+- [Vybavení (equipment)](equipment/index.md) — 13 slotů, 4 rarity, pevné staty, reroll za gold
+- [Ekonomika](economy/index.md) — Gold
 - [Síťování](tech/networking.md) — online, malý vlastní server
 
 ## Pilíře hry
@@ -27,7 +27,7 @@ a přetváření statů na itemech.
 ## Aktuální stav
 - Repozitář, wiki a konvence založeny ([tech/stack](tech/stack.md)).
 - **Hotovo:** žánr a režimy, staty a vzorce, equipment (rarita, sloty, reroll, sety),
-  všech **8 postav** — base staty, speky, role, resource a Mastery ([classes](mechanics/classes.md)).
+  všech **8 postav** — base staty, speky, role, resource a Mastery ([classes](classes/index.md)).
 - **Chybí:** schopnosti postav, obsah talentů, konkrétní itemy a jejich základní hodnoty,
   ekonomika (ceny), soubojový systém (aggro), síťová architektura, příběh a core loop.
 
@@ -35,4 +35,4 @@ a přetváření statů na itemech.
 - Perspektiva kamery (top-down / side-view)?
 - Co přetrvává mezi roguelike běhy (meta-progrese)?
 - Cílové platformy?
-- Aggro / threat systém pro tanky ([classes](mechanics/classes.md)).
+- Aggro / threat systém pro tanky ([classes](classes/index.md)).

@@ -16,9 +16,19 @@ wiki/            # LLM Wiki — markdown stránky spravované Claudem
   index.md       # katalog všech stránek (vždy aktuální)
   log.md         # append-only chronologický log operací
   overview.md    # souhrn hry a aktuálního stavu
-  game/          # koncept, příběh, svět, postavy
-  mechanics/     # jednotlivé herní mechaniky a systémy
-  classes/       # jedna stránka na postavu (base staty, Mastery, schopnosti)
+  game/          # koncept, příběh, svět, herní režimy
+  classes/       # postavy
+    index.md                # přehled: role, speky, srovnání base statů
+    abilities.md            # obecná pravidla schopností + šablona
+    talents.md              # obecná pravidla talentů
+    <postava>/index.md      # popis, role a speky, base staty, resource
+    <postava>/abilities.md  # aktivní a pasivní schopnosti (včetně Mastery pasivky)
+    <postava>/talents.md    # strom talentů
+  stats/         # staty, vzorce, resource
+  equipment/     # index.md = pravidla (sloty, rarita, reroll, sety)
+    <slot>/index.md         # itemy daného slotu (heads, chests, weapons, …)
+  combat/        # souboj: výpočet poškození, štíty, efekty (buffy, debuffy, DoT, CC), aggro
+  economy/       # měny a ceny
   tech/          # architektura, stack, konvence kódu
   decisions/     # ADR — číslované záznamy rozhodnutí (NNNN-nazev.md)
 ```
@@ -39,6 +49,7 @@ Tři vrstvy:
   3. Označ rozpory se staršími informacemi (sekce `## Rozpory`), neřeš je potichu.
   4. Aktualizuj `wiki/index.md` a připiš záznam do `wiki/log.md`.
   - Pokud uživatel popisuje hru přímo v chatu, nejdřív to ulož jako zdroj do `raw/YYYY-MM-DD-nazev.md`, pak ingestuj.
+- **Nová sekce** vzniká jako vlastní složka s `index.md` (ne jako další soubor ve společné složce).
 - **Query** (otázka na hru): vyhledej přes `index.md`, odpověz s odkazy na stránky. Pokud odpověď
   přinese novou hodnotnou syntézu (srovnání, analýza), nabídni její uložení jako novou stránku.
 - **Lint** („lint wiki“): najdi rozpory mezi stránkami, zastaralá tvrzení, osiřelé stránky bez odkazů,

@@ -166,3 +166,95 @@ Formát nadpisu: `## [YYYY-MM-DD] <ingest|query|lint|edit> | <název>`
 - Nová stránka mechanics/abilities: 5–6 aktivních schopností na postavu + několik pasivek, šablona pro zápis schopnosti (cena, cooldown, cast time, dosah, cíl, efekt).
 - Odkazy z classes, index, overview.
 - Otevřené: schopnosti na postavu, nebo na spec; hotbar; globální cooldown; odemykání během běhu.
+
+## [2026-09-25] edit | Složka na každou postavu
+- Zdroj: `raw/2026-09-25-struktura-classes.md`
+- `wiki/classes/<postava>.md` → `wiki/classes/<postava>/index.md`; ke každé postavě přidány prázdné `abilities.md` a `talents.md`.
+- Přepsány všechny odkazy ve wiki, doplněny rozcestníky v mechanics/abilities a mechanics/talents.
+- CLAUDE.md: aktualizovaná struktura repozitáře.
+
+## [2026-09-25] edit | Mastery jako pasivní schopnost
+- Zdroj: `raw/2026-09-25-mastery-pasivka.md`
+- Popisy Mastery přesunuty z `classes/<postava>/index.md` do `classes/<postava>/abilities.md` jako „Mastery pasivky (základní pasivka speku)“; v index zůstal odkaz.
+- Aktualizovány odkazy v shields, mechanics/abilities, mechanics/stats.
+- stats: popis statu Mastery přeformulován na „zvyšuje sílu pasivní schopnosti postavy“ + nová sekce Mastery s odkazy na pasivky jednotlivých speků (zdroj `raw/2026-09-25-mastery-stat-popis.md`).
+
+## [2026-09-25] edit | Rozpuštění mechanics/ do sekcí
+- Zdroj: `raw/2026-09-25-struktura-sekce.md`
+- `mechanics/classes.md` → `classes/index.md`, `mechanics/abilities.md` → `classes/abilities.md`.
+- Nové sekce: `stats/`, `equipment/`, `talents/`, `economy/`, `combat/` (shields). Složka `mechanics/` zrušena.
+- Přepsány všechny odkazy (kontrola: žádný rozbitý), aktualizován index a CLAUDE.md (+ pravidlo: nová sekce = vlastní složka s index.md).
+- `talents/index.md` → `classes/talents.md` (obecná pravidla talentů k postavám), složka `talents/` zrušena. Index a CLAUDE.md aktualizovány.
+
+## [2026-09-25] edit | Složky slotů v equipment
+- Zdroj: `raw/2026-09-25-equipment-slozky.md`
+- Uživatel vytvořil složky heads, chests, gloves, belts, legs, boots, rings, earrings, weapons, offhands, talismans.
+- Do každé doplněn `index.md` se slotem, násobitelem slotu a prázdnou tabulkou itemů (weapons má navíc typ zbraně a Range, talismans vlastní škálu).
+- equipment/index.md dostal rozcestník, index a CLAUDE.md aktualizovány.
+
+## [2026-09-25] edit | Sekce combat
+- Zdroj: `raw/2026-09-25-combat.md`
+- Nové stránky: combat/index (rozcestník + nevyřešené: aggro, autoattack, smrt), combat/damage (pořadí výpočtu, typy poškození, block, mitigation), combat/effects (DoT bleed/ignite, debuffy Insane a Voodoo Doll, buffy Propheta, stun).
+- Společná pravidla DoT vytažena z Warriora a Wizarda (tick timer, částečný tick, instance na dvojici cíl–zdroj).
+- Aggro přesunuto z classes do combat; stats odkazuje na damage. Index a CLAUDE.md aktualizovány.
+- combat/effects: DoT od různých hráčů se sčítají bez omezení, žádný strop na počet efektů na cíli, žádné diminishing returns na CC (stun má být silný). Otevřená zůstává čitelnost UI.
+- Odhad počtu současných efektů na cíli: ~10, ne 20 — UI to zvládne jednoduchou lištou ikon.
+
+## [2026-09-25] edit | Návrh schopností Warriora
+- Zdroj: `raw/2026-09-25-warrior-ability-zadani.md`
+- Do `classes/warrior/abilities.md` doplněno 6 aktivních schopností pro Wardena (Shield Bash, Challenge, Iron Stance, Bulwark, Punish, Last Stand) a 6 pro Bleed Dancera (Gash, Blade Dance, Hemorrhage, Frenzy, Bloodthirst, Blood Feast). Označeno jako **návrh Clauda, čeká na schválení**.
+- Návrh je psaný per spec → otázka „schopnosti na postavu, nebo na spec“ v classes/abilities upravena.
+
+## [2026-09-25] ingest | Threat systém a AoE pro tanky
+- Zdroj: `raw/2026-09-25-threat-aoe.md`
+- Nová stránka combat/threat: threat z poškození a healu, aggro má nejvyšší threat, tank spec generuje 10×.
+- Pravidlo „každý tank spec musí mít AoE schopnost“ zapsáno do classes/abilities a threat.
+- Warriorův Punish předělán na AoE (80 % fyz + 40 % Mitigation), Challenge napojen na threat.
+- Otevřené: jak funguje taunt vůči threatu, threat z healu, threat démona Hell Knighta, pokles threatu v čase.
+- Taunt: ignoruje threat, vynutí cíl na 2 s a vynuluje threat tabulku nepřítele (threat.md, Challenge upraven z 5 s na 2 s).
+- Threat: heal generuje threat u všech nepřátel v boji; démon Hell Knighta má vlastní threat; threat klesá o 10 % za sekundu. Nová poznámka: uniformní procentní pokles nemění pořadí — k rozhodnutí.
+- Threat: taunt vynuluje tabulku všem hráčům; pokles 10 %/s platí až po 3 s bez generování threatu (varianta a). Obě otázky uzavřeny.
+- Warrior: návrh schopností Wardena a Bleed Dancera předběžně odsouhlasen; zůstává ve stavu „návrh“ k pozdějšímu ladění.
+
+## [2026-09-25] edit | Návrh schopností Paladina
+- Zdroj: `raw/2026-09-25-paladin-ability-zadani.md`
+- `classes/paladin/abilities.md`: 6 schopností pro Dawn Knighta (Dawn Strike, Consecration, Call of Dawn, Judgment, Aegis, Undying Light), 6 pro Phoenix Ridera (Flame Lance, Phoenix Dive, Ember Brand, Wingbeat, Solar Flare, Rebirth Flame), 6 pro Light Bringera (Dawnlight, Radiance, Guardian Light, Purify, Beacon, Second Dawn). Stav: návrh.
+- Upozornění: Paladin má Spirit 0, ale používá Manu → nová otevřená otázka na jeho stránce.
+- Nová otázka v combat/effects: dají se debuffy odstraňovat (Purify)?
+- Paladin: Guardian Light nahrazen pasivkou Divine Spark (5 % max. Many při způsobeném poškození). Light Bringer má 5 aktivních + Mastery pasivku + Divine Spark.
+- Divine Spark: 5 % Many za každý zásah včetně autoattacků. Nové obecné pravidlo v combat/index: během sesílání kouzla nelze autoattackovat; autoattack krmí resource (Rage +10, Divine Spark +5 % Many).
+- Paladin nemá Spirit (rozhodnuto). Manu doplňuje Resource Regen z itemů a u Light Bringera Divine Spark; zapsáno v paladin/index, abilities a stats. Otázka uzavřena.
+- Divine Spark rozšířen na všechny speky Paladina (nahrazuje chybějící Spirit: Mana se doplňuje bojem).
+
+## [2026-09-25] edit | Návrh schopností Summonera
+- Zdroj: `raw/2026-09-25-summoner-ability-zadani.md`
+- `classes/summoner/abilities.md`: Hell Knight (Summon Infernal, Hellfire Roar = AoE + taunt, Infernal Mend, Soul Link, Dark Pact, Abyssal Chains), Necromancer (Raise Skeleton, Bone Spear, Command: Rend, Corpse Explosion, Death Coil, Soul Harvest), Warlock (Summon Imps/Hellhound/Void Terror, Shadow Bolt, Sacrifice, Demonic Surge). Stav: návrh.
+- Přidána tabulka vyvolaných bytostí s prázdnými staty a seznam rizik (staty bytostí, ovládání, limit počtu, threat, mrtvoly pro Corpse Explosion).
+- Summoner: doplněny vlastní schopnosti vyvolaných bytostí (Hellfire Aura, Impale, Cleave, Bone Shield, Firebolt, Maul, Void Slam) + otázka, zda je spouští AI nebo hráč.
+- Summoner: schopnosti bytostí spouští AI automaticky (rozhodnuto), návrh předběžně odsouhlasen.
+
+## [2026-09-25] edit | Návrh schopností Scouta
+- Zdroj: `raw/2026-09-25-scout-ability-zadani.md`
+- `classes/scout/abilities.md`: Hawkeye (Aimed Shot, Piercing Arrow, Hunter's Mark, Rain of Arrows, Disengage, Second Wind), Adventurer (Twin Strike, Shadowstep, Whirl, Exposing Cut, Adrenaline, Evasion). Stav: návrh.
+- Rizika: těsná Energy ekonomika (+5/3 s), Evasion zavádí snižování Hit Chance útočníkům, cílení na plochu.
+
+## [2026-09-25] edit | Návrh schopností Wizard, Monk, Shaman, Cleric
+- Zdroj: `raw/2026-09-25-zbyle-ability-zadani.md`
+- Wizard: Pyromancer (Fireball, Flame Wave, Detonate, Immolate, Blink, Firestorm), Soultaker (Soul Lash, Dark Nova, Drain Souls, Soul Tether, Void Step, Harvest).
+- Monk: Iron Turtle (Palm Strike, Sweeping Kick, Challenging Shout, Turtle Stance, Chi Barrier, Stone Skin), Deadly Tiger (Tiger Claw, Roaring Fist, Flurry, Leaping Strike, Inner Fire, Meditate).
+- Shaman: Witch Doctor (Spirit Bolt, Healing Totem, Hex, Spirit Surge, Cleansing Waters, Ancestral Guard), Voodoo Master (Voodoo Doll, Curse Bolt, Pin Needles, Plague, Soul Swap, Ritual of Pain).
+- Cleric: Mind Bender (Mind Spike, Psychic Scream, Shatter Mind, Confusion, Mind Barrier, Insanity Wave), Prophet (Blessing of Wrath, Holy Fire, Shield of Faith, Aura of Renewal, Prophecy, Divine Intervention), Bishop (Mend, Greater Mend, Circle of Healing, Sanctuary, Absolution, Martyr).
+- Všech 19 speků má návrh schopností. Otevřená rizika zapsána u jednotlivých postav.
+
+## [2026-09-25] ingest | Prophet – autoattack build
+- Zdroj: `raw/2026-09-25-prophet-autoattack.md`
+- Prophet je sám o sobě slabý **záměrně**; sólo hratelnost řeší talentová větev na autoattack (běžná zbraň, talent přepočítá Intelligence na poškození ze zbraně).
+- Zapsáno do cleric/talents (nová sekce), cleric/abilities (poznámka i riziko) a classes/talents jako obecné pravidlo: talenty smí měnit škálování statů a sólo roli postavy.
+- Confusion: cíl 3 s útočí na nejbližší nepřátelský cíl, ponecháno i v PvP jako zábavná interakce; doplněno do combat/effects (CC).
+- Confusion: zmatený cíl ztrácí i ovládání pohybu, i v PvP. Poznámka, že jde o nejsilnější CC ve hře.
+
+## [2026-09-25] ingest | Rozhodnutí k rizikům schopností
+- Zdroj: `raw/2026-09-25-ability-rozhodnuti.md`
+- Divine Intervention (Prophet) i Last Stand (Warden) zůstávají oba. Opravena chyba v zápisu: duplicita byla s Last Standem, ne s Undying Light (ten je heal 30 % HP).
+- Prophecy (zaručený krit) schválena jako žádoucí kombo s kritovými speky.
+- Ignite vzniká **jen z přímých zásahů**; DoT tiky neaplikují další efekty — zapsáno u Wizarda i jako obecné pravidlo v combat/effects.

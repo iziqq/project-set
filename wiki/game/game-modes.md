@@ -1,6 +1,6 @@
 # Herní režimy
 
-> Zdroje: [raw/2026-09-22-zanr-rezimy-role](../../raw/2026-09-22-zanr-rezimy-role.md) · Související: [koncept](concept.md), [síťování](../tech/networking.md), [classes](../mechanics/classes.md)
+> Zdroje: [raw/2026-09-22-zanr-rezimy-role](../../raw/2026-09-22-zanr-rezimy-role.md) · Související: [koncept](concept.md), [síťování](../tech/networking.md), [classes](../classes/index.md)
 
 | Režim | Typ | Hráči | Síť |
 |---|---|---|---|
@@ -13,11 +13,11 @@ Solo běhy. _Detaily doplnit._
 
 ## Co-op roguelike
 - Max. **5 hráčů**, online.
-- V co-opu mají smysl role tank / healer / DPS ([classes](../mechanics/classes.md)).
+- V co-opu mají smysl role tank / healer / DPS ([classes](../classes/index.md)).
 
 ## PvP battle royale
 - RPG battle royale: hráči proti sobě, poslední přeživší vyhrává (?).
-- **PvP může mít vlastní koeficienty balancu** (např. vyšší Mastery koeficient pro [Soultakera](../classes/wizard.md#soultaker-poškození-podle-počtu-nepřátel)). Implementačně: balanční data ve variantách PvE / PvP.
+- **PvP může mít vlastní koeficienty balancu** (např. vyšší Mastery koeficient pro [Soultakera](../classes/wizard/index.md#soultaker-poškození-podle-počtu-nepřátel)). Implementačně: balanční data ve variantách PvE / PvP.
 - _Detaily doplnit._
 
 ## Otevřené otázky

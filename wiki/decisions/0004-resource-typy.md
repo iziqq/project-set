@@ -9,7 +9,7 @@ používaly jen Manu (5 postav), Rage (Warrior) a Energy (Scout, Monk). Hope a D
 
 ## Rozhodnutí
 Enum se zkracuje na **Mana Points, Rage, Energy**. Hope a Darkness se vyřazují.
-Každý typ má vlastní způsob doplňování ([staty](../mechanics/stats.md#resource-enum)):
+Každý typ má vlastní způsob doplňování ([staty](../stats/index.md#resource-enum)):
 
 | Resource | Doplňování |
 |---|---|

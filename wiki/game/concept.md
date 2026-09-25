@@ -11,8 +11,8 @@ Podrobně v [game-modes](game-modes.md): singleplayer roguelike, co-op roguelike
 online), PvP battle royale (online).
 
 ## Hráčská fantazie
-Hráč si vybere postavu ([classes](../mechanics/classes.md)) a její roli (DPS / tank / healer podle
-postavy). Dál ji formuje přes [strom talentů](../mechanics/talents.md) a [vybavení](../mechanics/equipment.md).
+Hráč si vybere postavu ([classes](../classes/index.md)) a její roli (DPS / tank / healer podle
+postavy). Dál ji formuje přes [strom talentů](../classes/talents.md) a [vybavení](../equipment/index.md).
 Hra má být „dynamická“: dva hráči se stejnou postavou můžou hrát výrazně jinak.
 
 ## Premisa / příběh
